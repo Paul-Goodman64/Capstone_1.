@@ -122,5 +122,5 @@ ORDER BY total desc;
 SELECT county, SUM(total)
 FROM sales JOIN counties
 	USING(county)
-WHERE category_name ILIKE '%lique%'
+WHERE category_name ILIKE '%VODKA%'
 GROUP BY county;
