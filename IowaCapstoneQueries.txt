@@ -115,3 +115,12 @@ FROM sales s
 JOIN counties c ON s.county = c.county
 WHERE s.category_name ILIKE '%VODKA%'
 ORDER BY total desc;
+
+-- 13. Write a query that shows total sales for your [Category/Vendor] by county.
+-- Which county generates the most revenue for you? 
+
+SELECT county, SUM(total)
+FROM sales JOIN counties
+	USING(county)
+WHERE category_name ILIKE '%lique%'
+GROUP BY county;
