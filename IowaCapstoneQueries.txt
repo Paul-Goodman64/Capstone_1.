@@ -90,7 +90,7 @@ WHERE category_name LIKE '%VODKA%'
 -- your [Category/Vendor].
 -- (Opportunity: Analyzing performance in the "mid-tier" price bracket).
 
-SELECT *
+SELECT store, description, state_btl_cost, total
 FROM sales
 WHERE vendor ILIKE '%VODKA%'
 AND state_btl_cost::numeric BETWEEN 10 AND 20
